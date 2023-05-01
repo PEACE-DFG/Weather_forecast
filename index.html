@@ -96,7 +96,7 @@
             let user_input= document.getElementById('input_user').value
 
               //Weather forecast
-              fetch('https://goweather.herokuapp.com/weather/'+ user_input)
+                 fetch('https://goweather.herokuapp.com/weather/'+ user_input)
               .then(res => res.json())
               .then(json => {
 
@@ -146,6 +146,8 @@
                 document.getElementById('day3').innerHTML="DAY : " + " " + forecast3d;
                 document.getElementById('temperature3').innerHTML="\t Temperature : " + " " + forecast3t;
                 document.getElementById('wind3').innerHTML="\t WIND : " + " " + forecast3w;
+
+                
 
               })
         
