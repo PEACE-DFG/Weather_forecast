@@ -229,18 +229,19 @@
                     </div>
                     <hr>
                     <div class="header">
-                        <h2>Please Enter Your Country :</h2>
+                        <h2 >Please Enter Your Country :</h2>
 
                     </div>
                     <div class="out">
                     <input type="text" id="input_user">
                     <button onclick="display()" id="search">Search</button>
                     </div>
+                    <div>
+                        <h2 id="instruct" style="color: red;"></h2>
+                    </div>
 
                     <section class="datas">
-                        <div>
-                            <h2 id="instruct"></h2>
-                        </div>
+                        
                         <div  class="temperture">
 
                             <h2 id="temperature"> </h2>
@@ -355,10 +356,17 @@
                 document.getElementById('wind3').innerHTML="\t WIND : " + " " + forecast3w;
 
 
-                if (user_input){
-                    document.querySelector('#instruct').innerHTML="Please Enter A Country"
-                }
+               
               })
+              if (user_input==""){
+                document.querySelector('#instruct').innerHTML=" INVALID!!!!!! Please Enter A Country"
+                //window.alert("INVALID!!!!!! Please Enter A Country")
+            }
+            else{
+                document.querySelector('#instruct').innerHTML=" "
+
+
+            }
         
           }
 
